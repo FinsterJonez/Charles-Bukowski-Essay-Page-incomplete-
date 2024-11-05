@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <style>
+
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 3000px;
+      }
+
+      div {
+        font-weight: 500;
+      }
+
+      .header {
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+      }
+
+      .header-image {
+      width: 100%; /* Makes the image stretch to the container’s width */
+      height: auto; /* Keeps the image's aspect ratio */
+      display: block;
+      height: 100%;
+      object-fit: cover;
+      }
+
+      .author-name, .author-quote {
+        position: absolute;
+        color: white;
+        z-index: 2;
+        font-family: PassengerSerif, serif;
+      }
+
+      .author-name {
+        top: 25vh;
+        right: 20vw;
+        font-size: 4vw; /* Responsive font size */
+      }
+
+      .author-quote {
+        top: 35vh;
+        right: 28vw;
+        font-size: 1.5vw; /* Responsive font size */
+      }
+
+
+      .first-section-header, .second-section-header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid gray;
+        height: 50px;
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: 500;
+      }
+
+      .first-section {
+        margin-top: 10px;
+        height: 492.797px;
+      }
+
+      .first-section-photo {
+        width: 350px;
+        position: absolute;
+        right: 30px;
+        object-fit: cover;
+        border: 5px solid gray;
+        margin-top: px;
+      }
+
+
+      .first-section {
+        display: flex;
+        align-items: flex-start;
+        margin: 20px;
+        font-family: serif;
+        font-size: 20px;
+        line-height: 1.6;
+        max-width: 600px;
+      }
+
+      /* Large initial letter styling */
+      .first-letter {
+        font-size: 60px;
+        font-weight: bold;
+        float: left;
+        line-height: 1;
+        margin-right: 10px;
+        font-family: serif;
+      }
+
+      /* Rest of the paragraph styling */
+      .first-section-writing {
+        font-size: 20px;
+        line-height: 1.5;
+        width: 400px;
+        display: flex;
+        height: 502.8px;
+      }
+
+
+      .second-section {
+        display: flex;
+        align-items: flex-start;
+        margin: 20px;
+        font-family: serif;
+        font-size: 20px;
+        line-height: 1.6;
+        max-width: 600px;
+      }
+
+      .second-section-photo {
+        width: 195px;
+        height: 500px;
+        position: absolute;
+        right: 30px;
+        object-fit: contain;
+        margin-top: px;
+        background-color: rgb(255, 255, 255);
+        border: 4px solid gray;
+      }
+      
+      .second-section-photo-two {
+        position: absolute;
+        right: 250px;
+        object-fit: contain;
+        margin-top: px;
+        background-color: rgb(255, 255, 255);
+        border: 4px solid gray;
+      }
+
+      .under-image-quote-one {
+        width: 270px;
+        position: absolute;
+        right: 250px;
+        margin-top: 350px;
+        font-size: 16px;
+        background-color: gray;
+        color: white;
+        padding: 10px 10px 10px 10px;
+      }
+
+      .second-section-writing {
+        font-size: 20px;
+        line-height: 1.5;
+        width: 400px;
+        display: flex;
+      }
+
+      .writing {
+        font-size: 20px;
+        line-height: 1.5;
+        width: 400px;
+        display: flex;
+        height: 502.8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img class="header-image" src="Photos/bukowski-2.png">
+      <div class="author-name">Charles Bukowski</div>
+      <div class="author-quote">"Great art is horse shit, buy tacos."</div>
+    </div>
+
+    <div class="first-section-header">Early Beginnings</div>
+
+    <div class="first-section">
+      <img class="first-section-photo" src="Photos/1_9yG4vaujHKPj6DisrSi97w.webp">
+    <span class="first-letter">H</span>  enry Charles Bukowski, born Heinrich Karl Bukowski on August 16, 1920, in Andernach, Germany,
+       was a renowned American poet, novelist, and short-story writer.
+        He moved to Los Angeles with his family at the age of three, where his upbringing under
+         an abusive father significantly influenced his worldview. Bukowski’s writing, characterized by its raw honesty and unforgiving
+          style, often reflects the struggles of urban life, alcoholism, and the complexities of relationships. He became a
+           literary icon, known for capturing the essence of the human experience through his gritty portrayals of life on the margins.
+           His writing spoke to a wide audience, reflecting the struggles and triumphs of everyday life. Bukowski's raw and unfiltered style allowed readers to connect deeply with his experiences, making his themes of love, loneliness, and resilience universally relatable.
+           Bukowski passed away on March 9, 1994,
+            leaving behind a legacy that continues to resonate with readers and writers alike.
+           
+    </div>
+
+      <div class="second-section-header">
+        Childhood
+      </div>
+      <div class="second-section">
+        <img class="second-section-photo" src="Photos/family-photo.jpg">
+        <img class="second-section-photo-two" src="Photos/child-photo.jpg">
+        <div class="under-image-quote-one">
+          Dear child, I only did to you what the sparrow did to you;
+           I am old when it is fashionable to be young;
+            I cry when it is fashionable to laugh.
+             I hated you when it would have taken less courage to love.
+        </div>
+        <span class="first-letter">C</span> <div class="first-section-writing"></div>
+      </div>
+  </body>
+</html>
