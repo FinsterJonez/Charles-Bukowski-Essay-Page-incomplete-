@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-
-      body, html {
+            body, html {
         margin: 0;
         padding: 0;
-        height: 3000px;
+        height: 100%;
+        overflow-x: hidden;
+        width: 100%;
       }
+
 
       div {
         font-weight: 500;
+        font-family: serif;
       }
+
 
       .header {
         width: 100vw;
@@ -48,7 +52,6 @@
         font-size: 1.5vw; /* Responsive font size */
       }
 
-
       .first-section-header, .second-section-header {
         display: flex;
         align-items: center;
@@ -60,12 +63,20 @@
         font-weight: 500;
       }
 
-      .first-section {
-        margin-top: 10px;
-        height: 492.797px;
+      .first-section, .second-section {
+        display: flex;
+        align-items: flex-start;
+        margin: 20px;
+        font-family: serif;
+        font-size: 20px;
+        line-height: 1.6;
+        width: 100%;
+        margin-top: 1px;
+        margin-bottom: 1px;
       }
+      
 
-      .first-section-photo {
+      .first-photo {
         width: 350px;
         position: absolute;
         right: 30px;
@@ -75,17 +86,23 @@
       }
 
 
-      .first-section {
-        display: flex;
-        align-items: flex-start;
-        margin: 20px;
-        font-family: serif;
-        font-size: 20px;
-        line-height: 1.6;
-        max-width: 600px;
+      .left-side-one, .right-side-one, .right-side-two, .left-side-two {
+        display: inline-block;
+        position: relative;
+        padding: 1rem 1rem;
+        vertical-align: middle;
+        width: 100%;
+        height: 100%;
       }
 
-      /* Large initial letter styling */
+      .first-section-text, .second-section-text {
+        font-size: 20px;
+        line-height: 1.5;
+        width: 600px;
+        display: flex;
+        height: 100%;
+      }
+
       .first-letter {
         font-size: 60px;
         font-weight: bold;
@@ -95,109 +112,136 @@
         font-family: serif;
       }
 
-      /* Rest of the paragraph styling */
-      .first-section-writing {
-        font-size: 20px;
-        line-height: 1.5;
-        width: 400px;
-        display: flex;
-        height: 502.8px;
-      }
-
-
       .second-section {
-        display: flex;
-        align-items: flex-start;
-        margin: 20px;
-        font-family: serif;
-        font-size: 20px;
-        line-height: 1.6;
-        max-width: 600px;
+        margin-top: 20px;
+        height: 100%;
       }
 
-      .second-section-photo {
+      .first-photo-two {
+        position: absolute;
+        border: 4px solid gray;
+        right: 30px;
         width: 195px;
         height: 500px;
-        position: absolute;
-        right: 30px;
-        object-fit: contain;
-        margin-top: px;
-        background-color: rgb(255, 255, 255);
-        border: 4px solid gray;
-      }
-      
-      .second-section-photo-two {
-        position: absolute;
-        right: 250px;
-        object-fit: contain;
-        margin-top: px;
-        background-color: rgb(255, 255, 255);
-        border: 4px solid gray;
       }
 
-      .under-image-quote-one {
-        width: 270px;
+      .second-photo-two {
+        border: 4px solid gray;
         position: absolute;
         right: 250px;
-        margin-top: 350px;
-        font-size: 16px;
+      }
+
+      .section-two-quote {
+        position: absolute;
+        width: 330px;
+        font-size: 18px;
         background-color: gray;
         color: white;
         padding: 10px 10px 10px 10px;
+        right: 250px;
+        top: 360px;
+        text-align: center;
       }
 
-      .second-section-writing {
-        font-size: 20px;
-        line-height: 1.5;
-        width: 400px;
-        display: flex;
+      .timeline-box {
+        background-color: gray;
       }
 
-      .writing {
-        font-size: 20px;
-        line-height: 1.5;
-        width: 400px;
+      .timeline {
         display: flex;
-        height: 502.8px;
+        flex-direction: column;
+        position: absolute;
+        margin-left: 250px;
+        right: 450px;
+        top: 550px;
+      }
+
+      .timeline-two {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin-left: 250px;
+        right: 50px;
+        top: 550px;
+      }
+
+      .timeline-text::before {
+        content: "•";
+        
+      }
+
+      .timeline-text {
+        padding-bottom: 20px;
+      }
+
+      .date {
+        font-weight: bold;
       }
     </style>
   </head>
   <body>
+
     <div class="header">
       <img class="header-image" src="Photos/bukowski-2.png">
       <div class="author-name">Charles Bukowski</div>
       <div class="author-quote">"Great art is horse shit, buy tacos."</div>
     </div>
 
-    <div class="first-section-header">Early Beginnings</div>
 
+    <div class="first-section-header">
+      Early Begginings
+    </div>
     <div class="first-section">
-      <img class="first-section-photo" src="Photos/1_9yG4vaujHKPj6DisrSi97w.webp">
-    <span class="first-letter">H</span>  enry Charles Bukowski, born Heinrich Karl Bukowski on August 16, 1920, in Andernach, Germany,
-       was a renowned American poet, novelist, and short-story writer.
-        He moved to Los Angeles with his family at the age of three, where his upbringing under
-         an abusive father significantly influenced his worldview. Bukowski’s writing, characterized by its raw honesty and unforgiving
-          style, often reflects the struggles of urban life, alcoholism, and the complexities of relationships. He became a
-           literary icon, known for capturing the essence of the human experience through his gritty portrayals of life on the margins.
-           His writing spoke to a wide audience, reflecting the struggles and triumphs of everyday life. Bukowski's raw and unfiltered style allowed readers to connect deeply with his experiences, making his themes of love, loneliness, and resilience universally relatable.
-           Bukowski passed away on March 9, 1994,
-            leaving behind a legacy that continues to resonate with readers and writers alike.
-           
+      <div class="left-side-one">
+        <div class="first-section-text">
+          <span class="first-letter">H</span>  enry Charles Bukowski, born Heinrich Karl Bukowski on August 16, 1920, in Andernach, Germany,
+          was a renowned American poet, novelist, and short-story writer.
+           He moved to Los Angeles with his family at the age of three, where his upbringing under
+            an abusive father significantly influenced his worldview. Bukowski’s writing, characterized by its raw honesty and unforgiving
+             style, often reflects the struggles of urban life, alcoholism, and the complexities of relationships. He became a
+              literary icon, known for capturing the essence of the human experience through his gritty portrayals of life on the margins.
+              His writing spoke to a wide audience, reflecting the struggles and triumphs of everyday life. Bukowski's raw and unfiltered style allowed readers to connect deeply with his experiences, making his themes of love, loneliness, and resilience universally relatable.
+              Bukowski passed away on March 9, 1994,
+               leaving behind a legacy that continues to resonate with readers and writers alike.
+        </div>
+      </div>
+
+      <div class="right-side-one">
+        <img class="first-photo" src="Photos/1_9yG4vaujHKPj6DisrSi97w.webp">
+      </div>
     </div>
 
-      <div class="second-section-header">
-        Childhood
-      </div>
-      <div class="second-section">
-        <img class="second-section-photo" src="Photos/family-photo.jpg">
-        <img class="second-section-photo-two" src="Photos/child-photo.jpg">
-        <div class="under-image-quote-one">
-          Dear child, I only did to you what the sparrow did to you;
-           I am old when it is fashionable to be young;
-            I cry when it is fashionable to laugh.
-             I hated you when it would have taken less courage to love.
+    <div class="first-section-header">
+Childhood
+    </div>
+    <div class="second-section">
+      <div class="left-side-two">
+        <div class="second-section-text">
+          <span class="first-letter">C</span>harles Bowkowskis life started in Andernach, Germany with his father Heinrich Bukowski, an American of German descent and a veteran of WW1, and his mother Katharina. Charles’s parents met in Andernach following WW1. Heinrich had an affair with Katharina, a German friend's sister, and subsequently became pregnant. Bukowski repeatedly claimed to be born before his parents married, but his mothers marital records show that his parents married 1 month beforehand. His father then got a job as a building contractor and after two years the family moved to Koblenz. However the post war repairs being required of Germany which led to a stagnant economy and high inflations he was unable to make a living and rather decided to move to the US. They sailed to Baltimore, Maryland, where they settled for a while until deciding to move to Mid-City Los Angeles. Bukowski says that, with his mothers lack of objection to the infringement of their rights, his father frequently abused his mother and himself both physically and mentally. This impacted his writing style and decisions throughout his life. He also said that it helped his writing, as he came to understand undeserved pain. In his early teen years, Bukowski was introduced to alcohol by his friend William. He often states how alcohol helped him overcome hardships and helped him write. After graduating from highschool Bukowski attended Los Angeles City College for two years. He took courses in art, journalism and literature before quitting at the start of WW2. He then moved to New York in hopes of becoming a writer. With the war ongoing, Bulkowski was arrested by FBI agents on suspicion of draft evasion. At the time the U.S was at war with Nazi Germany and Bukowskis German birth troubled the authorities. After being held for seventeen days he was later given a Selective Service Classification of 4-F. Which basically means he was unfit to serve in the army due to physical, mental or moral conditions.
         </div>
-        <span class="first-letter">C</span> <div class="first-section-writing"></div>
       </div>
+
+      <div class="right-side-two">
+        <img class="first-photo-two" src="Photos/family-photo.jpg">
+        <img class="second-photo-two" src="Photos/child-photo.jpg">
+        <div class="section-two-quote">
+          Dear child, I only did to you what the sparrow did to you; I am old when it is fashionable to be young; I cry when it is fashionable to laugh. I hated you when it would have taken less courage to love.
+        </div>
+        <div class="timeline-box">
+          <div class="timeline">
+            <div class="timeline-text"> <span class="date">1918</span> Charles parents met</div>
+            <div class="timeline-text"> <span class="date">1920</span> Charles Bowkowski is born</div>
+            <div class="timeline-text"><span class="date">1923</span> Charles and his parents moved to Baltimore, Maryland </div>
+            <div class="timeline-text"><span class="date">1930</span> Charles and his parents moved it Mid-City, Los Angles, California</div>
+        </div>
+        <div class="timeline-two">
+          <div class="timeline-text"> <span class="date">1941</span> Charles moved to New York</div>
+          <div class="timeline-text"> <span class="date">1939</span> Charles graduates highschool</div>
+          <div class="timeline-text"> <span class="date">1941</span> Charles dropsout of college</div>
+          <div class="timeline-text"> <span class="date">1944</span> Charles is arrested and set free by the FBI</div>
+          <div class="timeline-text"><span class="date">1933</span> Charles is introduced to alchohol</div>
+        </div>
+        </div>
+    </div>
   </body>
 </html>
