@@ -9,6 +9,7 @@
         height: 100%;
         overflow-x: hidden;
         width: 100%;
+        background-color: rgb(235 235, 235)
       }
 
 
@@ -143,40 +144,51 @@
         text-align: center;
       }
 
-      .timeline-box {
-        background-color: gray;
-      }
 
       .timeline {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin-left: 250px;
-        right: 450px;
-        top: 550px;
-      }
+  position: absolute;
+  right: 30px;
+  top: 550px;
+  width: 528px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-left: 3px solid gray;
+}
 
-      .timeline-two {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        margin-left: 250px;
-        right: 50px;
-        top: 550px;
-      }
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  position: relative;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 1.4;
+}
 
-      .timeline-text::before {
-        content: "•";
-        
-      }
+.timeline-item::before {
+  content: "•";
+  position: absolute;
+  left: -12px;
+  color: gray;
+  font-size: 24px;
+}
 
-      .timeline-text {
-        padding-bottom: 20px;
-      }
+.timeline-date {
+  font-weight: bold;
+  min-width: 45px;
+}
+
+.timeline-content {
+  flex: 1;
+}
 
       .date {
         font-weight: bold;
       }
+
     </style>
   </head>
   <body>
@@ -227,20 +239,40 @@ Childhood
         <div class="section-two-quote">
           Dear child, I only did to you what the sparrow did to you; I am old when it is fashionable to be young; I cry when it is fashionable to laugh. I hated you when it would have taken less courage to love.
         </div>
-        <div class="timeline-box">
-          <div class="timeline">
-            <div class="timeline-text"> <span class="date">1918</span> Charles parents met</div>
-            <div class="timeline-text"> <span class="date">1920</span> Charles Bowkowski is born</div>
-            <div class="timeline-text"><span class="date">1923</span> Charles and his parents moved to Baltimore, Maryland </div>
-            <div class="timeline-text"><span class="date">1930</span> Charles and his parents moved it Mid-City, Los Angles, California</div>
-        </div>
-        <div class="timeline-two">
-          <div class="timeline-text"> <span class="date">1941</span> Charles moved to New York</div>
-          <div class="timeline-text"> <span class="date">1939</span> Charles graduates highschool</div>
-          <div class="timeline-text"> <span class="date">1941</span> Charles dropsout of college</div>
-          <div class="timeline-text"> <span class="date">1944</span> Charles is arrested and set free by the FBI</div>
-          <div class="timeline-text"><span class="date">1933</span> Charles is introduced to alchohol</div>
-        </div>
+        
+        <div class="timeline">
+          <div class="timeline-item">
+            <span class="timeline-date">1918</span>
+            <span class="timeline-content">Charles parents met</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">1920</span>
+            <span class="timeline-content">Charles Bukowski is born</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">1923</span>
+            <span class="timeline-content">Moved to Baltimore, Maryland</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">1930</span>
+            <span class="timeline-content">Moved to Mid-City, Los Angeles</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">1933</span>
+            <span class="timeline-content">Introduced to alcohol</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">1939</span>
+            <span class="timeline-content">Graduates high school</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">1941</span>
+            <span class="timeline-content">Drops out of college and moves to New York</span>
+          </div>
+          <div class="timeline-item">
+            <span class="timeline-date">1944</span>
+            <span class="timeline-content">Arrested and released by the FBI</span>
+          </div>
         </div>
     </div>
   </body>
